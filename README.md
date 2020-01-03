@@ -35,7 +35,7 @@ You can safely ignore any warnings about it if you aren't using it.
 
 ```ts
 import Discoin from '@discoin/scambio';
-// Or for CommonJS: const Discoin = require('@discoin/scambio');
+// Or for CommonJS: const Discoin = require('@discoin/scambio').default;
 
 const client = new Discoin('token', 'currencyCode');
 ```
