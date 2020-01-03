@@ -11,14 +11,14 @@ import {apiBotToBot} from '../util/data-transfer-object';
 export const botStore = {
 	/**
 	 * Get several bot from the API by specifying a query.
-	 * @param query The query for finding bots (not URL encoded)
+	 * @param query The query for finding bots
 	 * @returns An array of bots that satisfy the query
 	 * @example
 	 * client.getMany('filter=id||eq||388191157869477888');
 	 */
 	async getMany(query?: string): Promise<Bot[]> {
 		// Interpolation of query parameters here is almost certainly a mistake
-		const req = fetch(`${API_URL}/bots${query ? `?${encodeURIComponent(query)}` : ''}`, {
+		const req = fetch(`${API_URL}/bots${query ? `?${query}` : ''}`, {
 			headers: new Headers({'User-Agent': USER_AGENT})
 		});
 
@@ -37,7 +37,7 @@ export const botStore = {
 	 * @returns The bot
 	 */
 	async getOne(id: string): Promise<Bot> {
-		const req = fetch(`${API_URL}/bots/${id}`, {
+		const req = fetch(`${API_URL}/bots/${encodeURIComponent(id)}`, {
 			headers: new Headers({'User-Agent': USER_AGENT})
 		});
 

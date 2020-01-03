@@ -34,9 +34,8 @@ You can safely ignore any warnings about it if you aren't using it.
 #### Creating a new client
 
 ```ts
-import {Client as Discoin} from '@discoin/scambio';
-// CommonJS: const { Client: Discoin } = require('@discoin/scambio');
-// Node.JS: const Discoin = require('@discoin/scambio').default;
+import Discoin from '@discoin/scambio';
+// Or for CommonJS: const Discoin = require('@discoin/scambio');
 
 const client = new Discoin('token', 'currencyCode');
 ```
