@@ -1,3 +1,4 @@
+# THIS REPO HAS BEEN ARCHIVED. THIS VERSION OF SCAMBIO IS NOT TO BE USED, PLEASE GO TO [THE OFFICIALLY SUPPORTED ONE!](https://github.com/discoin/scambio)
 # Scambio
 
 **Project Status**
